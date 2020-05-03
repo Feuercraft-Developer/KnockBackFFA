@@ -1,4 +1,4 @@
-package con.feuercraft.developers.knockbackffa.scoreboard;
+package com.feuercraft.developers.knockbackffa.scoreboard;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
