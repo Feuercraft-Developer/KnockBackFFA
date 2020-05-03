@@ -32,8 +32,6 @@ public class ScoreboardHandler {
 
         player.setScoreboard(scoreboard);
 
-        startAnimation();
-
     }
 
     public void startAnimation() {
