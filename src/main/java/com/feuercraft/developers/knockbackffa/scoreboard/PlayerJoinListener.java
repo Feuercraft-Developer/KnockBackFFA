@@ -8,7 +8,7 @@ public class PlayerJoinListener implements Listener  {
 
     @EventHandler
     public void  onPlayerJoin (final PlayerJoinEvent event) {
-        new ScoreboardHandler().setScorboard(event.getPlayer());
+        new ScoreboardHandler().setScoreboard(event.getPlayer());
 
     }
 

@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
 
 public class ScoreboardHandler {
 
@@ -15,20 +16,23 @@ public class ScoreboardHandler {
         "§6HALLO", "§eHALLO", "§fHALLO", "§eHALLO", "§6HALLO"
     };
 
-    public void setScorboard (final Player player) {
-        final Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
-        Object objective = scoreboard.registerNewObjective("main-content", "dummy");
+    public void setScoreboard (final Player player) {
+        ScoreboardManager manager = Bukkit.getScoreboardManager();
+        Scoreboard scoreboard = manager.getNewScoreboard();
+        Object objective = scoreboard.registerNewObjective("maincontent", "dummy");
 
-        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-        objective.setDispalayName(animationCount);
+        ((Objective) objective).setDisplaySlot(DisplaySlot.SIDEBAR);
+        ((Objective) objective).setDisplayName("Animation");
 
-        objective.getScore("§7Hallo").setScore(5);
-        objective.getScore("§7Hallo").setScore(4);
-        objective.getScore("§7Hallo").setScore(3);
-        objective.getScore("§7Hallo").setScore(2);
-        objective.getScore("§7Hallo").setScore(1);
+        ((Objective) objective).getScore("§7Hallo").setScore(5);
+        ((Objective) objective).getScore("$7Hallo").setScore(4);
+        ((Objective) objective).getScore("§7Hallo").setScore(3);
+        ((Objective) objective).getScore("§7Hallo").setScore(2);
+        ((Objective) objective).getScore("§7Hallo").setScore(1);
 
         player.setScoreboard(scoreboard);
+
+        startAnimation();
 
     }
 
@@ -40,7 +44,7 @@ public class ScoreboardHandler {
                 Bukkit.getOnlinePlayers().forEach(current -> {
 
                     if (current.getScoreboard() == null)
-                        setScorboard(current);
+                        setScoreboard(current);
 
                     current.getScoreboard().getObjective(DisplaySlot.SIDEBAR).setDisplayName(animation[animationCount]);
 
