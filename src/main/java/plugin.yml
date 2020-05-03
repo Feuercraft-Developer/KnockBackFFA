@@ -1,9 +1,5 @@
 name: KnockBackFFA
 main: com.feuercraft.developers.knockbackffa.Main
-version: 1.8.8-1.0
-authors:
-  - KiosTV
-  - TimeToLvcky
-
-commands:
-  #TODO Command setup
+version: 1.0
+description: A simple Plugin
+author: [KiosTV, TimeToLvcky]
