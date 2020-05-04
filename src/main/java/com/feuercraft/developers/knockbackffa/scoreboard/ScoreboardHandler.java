@@ -16,19 +16,20 @@ public class ScoreboardHandler {
         "§6HALLO", "§eHALLO", "§fHALLO", "§eHALLO", "§6HALLO"
     };
 
+    @SuppressWarnings("deprecation")
     public void setSideScoreboard (final Player player) {
         ScoreboardManager manager = Bukkit.getScoreboardManager();
         Scoreboard scoreboard = manager.getNewScoreboard();
-        Object objective = scoreboard.registerNewObjective("maincontent", "dummy");
+        Objective objective = scoreboard.registerNewObjective("maincontent", "dummy");
 
-        ((Objective) objective).setDisplaySlot(DisplaySlot.SIDEBAR);
-        ((Objective) objective).setDisplayName("Animation");
+        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+        objective.setDisplayName("Animation");
 
-        ((Objective) objective).getScore("§6Hallo").setScore(5);
-        ((Objective) objective).getScore("§4Ich").setScore(4);
-        ((Objective) objective).getScore("§abin").setScore(3);
-        ((Objective) objective).getScore("§cein").setScore(2);
-        ((Objective) objective).getScore("§6Scoreboard").setScore(1);
+        objective.getScore("§6Hallo").setScore(5);
+        objective.getScore("§4Ich").setScore(4);
+        objective.getScore("§abin").setScore(3);
+        objective.getScore("§cein").setScore(2);
+        objective.getScore("§6Scoreboard").setScore(1);
 
         player.setScoreboard(scoreboard);
 
