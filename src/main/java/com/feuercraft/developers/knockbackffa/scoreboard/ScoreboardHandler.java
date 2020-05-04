@@ -16,7 +16,7 @@ public class ScoreboardHandler {
         "§6HALLO", "§eHALLO", "§fHALLO", "§eHALLO", "§6HALLO"
     };
 
-    public void setScoreboard (final Player player) {
+    public void setSideScoreboard (final Player player) {
         ScoreboardManager manager = Bukkit.getScoreboardManager();
         Scoreboard scoreboard = manager.getNewScoreboard();
         Object objective = scoreboard.registerNewObjective("maincontent", "dummy");
@@ -24,11 +24,11 @@ public class ScoreboardHandler {
         ((Objective) objective).setDisplaySlot(DisplaySlot.SIDEBAR);
         ((Objective) objective).setDisplayName("Animation");
 
-        ((Objective) objective).getScore("§7Hallo").setScore(5);
-        ((Objective) objective).getScore("$7Hallo").setScore(4);
-        ((Objective) objective).getScore("§7Hallo").setScore(3);
-        ((Objective) objective).getScore("§7Hallo").setScore(2);
-        ((Objective) objective).getScore("§7Hallo").setScore(1);
+        ((Objective) objective).getScore("§6Hallo").setScore(5);
+        ((Objective) objective).getScore("§4Ich").setScore(4);
+        ((Objective) objective).getScore("§abin").setScore(3);
+        ((Objective) objective).getScore("§cein").setScore(2);
+        ((Objective) objective).getScore("§6Scoreboard").setScore(1);
 
         player.setScoreboard(scoreboard);
 
@@ -42,7 +42,7 @@ public class ScoreboardHandler {
                 Bukkit.getOnlinePlayers().forEach(current -> {
 
                     if (current.getScoreboard() == null)
-                        setScoreboard(current);
+                        setSideScoreboard(current);
 
                     current.getScoreboard().getObjective(DisplaySlot.SIDEBAR).setDisplayName(animation[animationCount]);
 

@@ -34,13 +34,13 @@ public class FileUtils {
                 e.printStackTrace();
             }
         }
-        cfg.addDefault("Messages.Prefix", "&8&b[Knock-Back FFA] &7");
+        cfg.addDefault("Messages.Prefix", "&8&b[Knock-Back FFA] &6");
         cfg.options().copyDefaults(true);
         saveFiles();
     }
 
     public static String getConfigString(String path){
-        return cfg.getString(path).replace("&", "$");
+        return cfg.getString(path).replace("&", "§");
     }
 
 }
