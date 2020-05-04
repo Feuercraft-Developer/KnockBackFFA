@@ -1,7 +1,7 @@
 package com.feuercraft.developers.knockbackffa;
 
-import com.feuercraft.developers.utils.FileUtils;
-import com.feuercraft.developers.utils.Utils;
+import com.feuercraft.developers.knockbackffa.utils.FileUtils;
+import com.feuercraft.developers.knockbackffa.utils.Utils;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {

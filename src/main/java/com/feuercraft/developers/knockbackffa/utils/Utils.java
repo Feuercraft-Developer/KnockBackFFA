@@ -1,4 +1,4 @@
-package com.feuercraft.developers.utils;
+package com.feuercraft.developers.knockbackffa.utils;
 
 import org.bukkit.Bukkit;
 
