@@ -1,7 +1,5 @@
-package com.feuercraft.developers.knockbackffa.utils;
+package eu.feuercraft.developers.knockbackffa.utils;
 
-import com.feuercraft.developers.knockbackffa.Main;
-import com.feuercraft.developers.knockbackffa.scoreboard.PlayerJoinListener;
 import org.bukkit.Bukkit;
 
 public class Utils {

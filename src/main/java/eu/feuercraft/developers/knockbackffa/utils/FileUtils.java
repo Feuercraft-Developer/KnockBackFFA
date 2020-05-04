@@ -1,4 +1,4 @@
-package com.feuercraft.developers.knockbackffa.utils;
+package eu.feuercraft.developers.knockbackffa.utils;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 

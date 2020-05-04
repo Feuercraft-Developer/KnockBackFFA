@@ -1,6 +1,6 @@
-package com.feuercraft.developers.knockbackffa.scoreboard;
+package eu.feuercraft.developers.knockbackffa.scoreboard;
 
-import com.feuercraft.developers.knockbackffa.utils.Utils;
+import eu.feuercraft.developers.knockbackffa.utils.Utils;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
