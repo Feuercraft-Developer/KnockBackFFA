@@ -36,6 +36,7 @@ public class FileUtils {
             }
         }
         cfg.addDefault("Messages.Prefix", "&8&b[Knock-Back FFA] &6");
+        cfg.addDefault("Server.Type", "Lobby");
         cfg.options().copyDefaults(true);
         saveFiles();
     }

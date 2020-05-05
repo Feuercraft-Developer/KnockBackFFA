@@ -20,11 +20,10 @@ public class ScoreboardHandler {
     Scoreboard scoreboard = manager.getNewScoreboard();
     Objective animatedObjective = scoreboard.registerNewObjective("maincontent", "dummy");
 
-    @SuppressWarnings("deprecation")
     public void setSideScoreboard (final Player player) {
 
         animatedObjective.setDisplaySlot(DisplaySlot.SIDEBAR);
-        animatedObjective.setDisplayName("Animation");
+        animatedObjective.setDisplayName(animation[0]);
 
         animatedObjective.getScore("§6Hallo").setScore(5);
         animatedObjective.getScore("§4Ich").setScore(4);
