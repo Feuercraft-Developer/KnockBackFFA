@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KnockBackFFA:jar">
+    <output-path>$PROJECT_DIR$/../../../Minecraft_Server/plugins</output-path>
+    <root id="archive" name="KnockBackFFA.jar">
+      <element id="module-output" name="KnockBackFFA" />
+    </root>
+  </artifact>
+</component>

@@ -1,6 +1,8 @@
 package eu.feuercraft.developers.knockbackffa;
 
+import eu.feuercraft.developers.knockbackffa.game.utils.GameFileUtils;
 import eu.feuercraft.developers.knockbackffa.scoreboard.PlayerJoinListener;
+import eu.feuercraft.developers.knockbackffa.scoreboard.ScoreboardHandler;
 import eu.feuercraft.developers.knockbackffa.utils.FileUtils;
 import eu.feuercraft.developers.knockbackffa.utils.Utils;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,7 +15,9 @@ public class Main extends JavaPlugin {
         registerCommands();
         registerEventListeners();
         FileUtils.setupFiles();
+        GameFileUtils.setupFiles();
         Utils.sendConsole("Plugin successfully loaded!");
+        new ScoreboardHandler().startAnimation();
 
     }
 

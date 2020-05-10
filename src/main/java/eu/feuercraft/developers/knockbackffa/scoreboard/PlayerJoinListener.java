@@ -10,7 +10,6 @@ public class PlayerJoinListener implements Listener  {
     @EventHandler
     public void  onPlayerJoin (PlayerJoinEvent event) {
         new ScoreboardHandler().setSideScoreboard(event.getPlayer());
-        Utils.sendConsole("The Player " + event.getPlayer().getName() + " has joined the Game!");
 
     }
 

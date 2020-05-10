@@ -1,5 +1,5 @@
 name: KnockBackFFA
 main: eu.feuercraft.developers.knockbackffa.Main
-version: 1.0
-load: STARTUP
+version: 1.8.8-1.0
+author: [KiosTV, TimeToLvcky]
 description: A simple Plugin

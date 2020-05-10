@@ -10,15 +10,15 @@ import org.bukkit.scoreboard.ScoreboardManager;
 
 public class ScoreboardHandler {
 
-    private static int animationCount;
+    private static Integer animationCount;
 
-    private String [] animation = new String[] {
+    private final String [] animation = new String[] {
         "§6HALLO", "§eHALLO", "§fHALLO", "§eHALLO", "§6HALLO"
     };
 
     ScoreboardManager manager = Bukkit.getScoreboardManager();
     Scoreboard scoreboard = manager.getNewScoreboard();
-    Objective animatedObjective = scoreboard.registerNewObjective("maincontent", "dummy");
+    Objective animatedObjective = scoreboard.registerNewObjective("main-content", "dummy");
 
     public void setSideScoreboard (final Player player) {
 
@@ -37,28 +37,23 @@ public class ScoreboardHandler {
 
     public void startAnimation() {
         animationCount = 0;
-        Bukkit.getScheduler().runTaskTimer(Main.getPlugin(Main.class), new Runnable() {
-            @Override
-            public void run() {
-                Bukkit.getOnlinePlayers().forEach(current -> {
+        Bukkit.getScheduler().runTaskTimer(Main.getPlugin(Main.class), () -> {
 
-                    if (current.getScoreboard() == null)
-                        setSideScoreboard(current);
-
-                    animatedObjective.setDisplayName(animation[animationCount]);
+            Bukkit.getOnlinePlayers().forEach( current -> {
+                if(current.getScoreboard() == null) {
                     setSideScoreboard(current);
+                }
 
-                });
+                current.getScoreboard().getObjective(DisplaySlot.SIDEBAR).setDisplayName(animation[animationCount]);
 
-                animationCount++;
+            });
 
-                if (animationCount == animation.length)
-                    animationCount = 0;
-
-
-
+            animationCount ++;
+            if(animationCount == animation.length){
+                animationCount = 0;
             }
-        },0, 5);
+
+        },0,5);
 
     }
 

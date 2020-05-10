@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FFA_for_Cloud.jar">
+    <output-path>$PROJECT_DIR$/../../../CloudNet/local/templates/Lobby/default/plugins</output-path>
+    <root id="archive" name="KnockBackFFA.jar">
+      <element id="module-output" name="KnockBackFFA" />
+    </root>
+  </artifact>
+</component>
